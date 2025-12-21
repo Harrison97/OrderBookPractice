@@ -33,6 +33,13 @@ pub struct OrderBook {
     buy_side: BTreeMap<i64, VecDeque<Order>>,
     sell_side: BTreeMap<i64, VecDeque<Order>>,
 }
+
+impl Default for OrderBook {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl OrderBook {
     pub fn new() -> Self {
         Self {

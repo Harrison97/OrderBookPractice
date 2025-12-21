@@ -29,10 +29,10 @@ use matching_engine::{OrderBook, Side};
 fn main() {
     println!("Hello, world!");
     let mut book = OrderBook::new();
-    book.submit(Side::Buy, 21, 3);
-    book.submit(Side::Sell, 20, 4);
-    book.submit(Side::Buy, 19, 3);
-    book.submit(Side::Buy, 22, 3);
-    book.submit(Side::Buy, -22, 3);
+    let _ = book.submit(Side::Buy, 21, 3);
+    let _ = book.submit(Side::Sell, 20, 4);
+    let _ = book.submit(Side::Buy, 19, 3);
+    let _ = book.submit(Side::Buy, 22, 3);
+    let _ = book.submit(Side::Buy, -22, 3);
     dbg!(&book);
 }
