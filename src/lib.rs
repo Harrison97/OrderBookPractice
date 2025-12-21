@@ -97,9 +97,7 @@ impl OrderBook {
                 println!("Filled order at price {} for qty {}.", price, qty);
                 true
             }
-            _ => {
-                false
-            }
+            _ => false,
         }
     }
 }
